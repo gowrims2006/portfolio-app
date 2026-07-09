@@ -4,23 +4,26 @@ export default function Projects() {
             title: "Portfolio Website",
             desc: "My personal portfolio built with Next.js 16 and Tailwind CSS",
             tech: ["Next.js", "React", "Tailwind"],
-            link: "#"
+            link: "https://gowri-portfolio-2026-42a39.web.app", // Firebase deploy kazhinju idha idu
+            github: "https://github.com/gowrims2006/portfolio-app"
         },
         {
             title: "E-Commerce App",
             desc: "Full stack shopping app with cart and payment integration",
             tech: ["React", "Node.js", "MongoDB"],
-            link: "#"
+            link: "https://ecommerce-app-nu-puce.vercel.app/", // Ninte e-commerce link
+            github: "https://github.com/gowrims2006/ecommerce-app"
         },
         {
             title: "Task Manager",
             desc: "Simple and clean todo app with drag-drop features",
             tech: ["React", "JavaScript", "CSS"],
-            link: "#"
+            link: "https://task-manager-x6ym.vercel.app/",
+            github: "https://github.com/gowrims2006/task-manager"
         }
-    ]
+    ]  // ← ITHU KANDU - array close
 
-    return (
+    return (  // ← ITHU KANDU - return start
         <main className="min-h-screen bg-gray-900 text-white p-8 md:p-24">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-5xl font-bold mb-12 text-blue-400">My Projects</h1>
@@ -37,13 +40,18 @@ export default function Projects() {
                                     </span>
                                 ))}
                             </div>
-                            <a href={project.link} className="text-blue-400 hover:text-blue-300 font-semibold">
-                                View Project →
-                            </a>
+                            <div className="flex gap-4">
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">
+                                    Live Demo →
+                                </a>
+                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-300 font-semibold">
+                                    GitHub
+                                </a>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
         </main>
-    )
-}
+    )  // ← return close
+}  // ← function close
